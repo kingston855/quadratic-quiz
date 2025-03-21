@@ -1,3 +1,21 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import QuadraticEquationQuiz from "./QuadraticEquationQuiz";
+import StudentPerformancePortal from "./StudentPerformancePortal";
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<QuadraticEquationQuiz />} />
+        <Route path="/performance" element={<StudentPerformancePortal />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
+
 import React, { useState, useEffect } from 'react';
 import { Timer, Check, X, Award } from 'lucide-react';
 
